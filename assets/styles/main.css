@@ -1,0 +1,204 @@
+/*variables*/
+:root {
+    --background-color: #FFFFFF;
+    --button-color: #458FF6;
+    --title-color: #233348;
+    --large-wieght: 700;
+    --meduim-wieght: 550;
+    --large-horizontal-padding: 112px;
+    --meduim-horizontal-padding: 72px;
+    --small-horizontal-padding: 32px;
+    --large-vertical-padding: 32px;
+    --meduim-vertical-padding: 24px;
+    --large-gap: 32px;
+    --meduim-gap: 24px;
+    --small-gap: 16px;
+}
+
+/*rules*/
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+/*header style*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--large-vertical-padding) var(--large-horizontal-padding);
+}
+
+header .title {
+    display: flex;
+    gap: var(--small-gap);
+    align-items: center;
+    justify-content: center;
+}
+
+header .title .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    border-radius: 50%;
+    background: var(--button-color);
+    aspect-ratio: 1 / 1;
+}
+
+header .title p {
+    color: var(--background-color);
+    font-weight: var(--large-wieght);
+    font-size: 24px;
+}
+
+header .title h2 {
+    color: var(--title-color);
+    font-weight: var(--large-wieght);
+    font-size: 22px;
+}
+
+header .small-links {
+    display: none;
+    ;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: var(--large-gap);
+}
+
+header ul li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+header ul li a {
+    font-weight: var(--meduim-wieght);
+    font-size: 16px;
+    color: var(--title-color);
+    position: relative;
+}
+
+header ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--title-color);
+    transition: width 0.3s ease-in-out;
+}
+
+header ul li a:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        padding: var(--meduim-vertical-padding) var(--meduim-horizontal-padding);
+    }
+
+    header .title .icon {
+        width: 32px;
+    }
+
+    header .title p {
+        font-size: 22px;
+    }
+
+    header .title h2 {
+        font-size: 20px;
+    }
+
+    header ul {
+        gap: var(--meduim-gap);
+    }
+
+    header ul a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    header ul {
+        display: none;
+    }
+
+    header {
+        padding: var(--meduim-vertical-padding) var(--small-horizontal-padding);
+    }
+
+    header .small-links {
+        display: inherit;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        justify-content: center;
+    }
+
+    header .small-links .icon {
+        display: inherit;
+        align-items: end;
+        flex-direction: column;
+        width: 30px;
+        gap: 5px
+    }
+
+    header .small-links .icon span {
+        height: 2px;
+        background-color: var(--title-color);
+        width: 100%;
+    }
+
+    header .small-links .icon span:nth-child(2) {
+        width: 60%;
+        transition: width 0.3s ease-in-out;
+    }
+
+    header .small-links .icon:hover span:nth-child(2) {
+        width: 100%;
+    }
+
+    header .small-links ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 44px;
+        right: 0;
+        background-color: white;
+        border-radius: 4px;
+        padding: 8px 0;
+        width: 150px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    header .small-links:hover ul {
+        display: flex;
+    }
+
+    header .small-links ul li {
+        align-self: left;
+        padding: 4px 16px;
+    }
+
+    header .small-links ul li a {
+        color: var(--title-color);
+        font-size: 14px;
+    }
+
+}
