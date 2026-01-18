@@ -258,7 +258,7 @@ header ul li a:hover::after {
 }
 
 .home a{
-    padding: var(--px-16);
+    padding: var(--px-16) var(--px-32);
     width: fit-content;
     display: flex;
     justify-content: center;
