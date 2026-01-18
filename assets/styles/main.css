@@ -259,7 +259,7 @@ header ul li a:hover::after {
 
 .home a{
     width: calc(var(--px-120) + var(--px-40));
-    padding: var(--px-16) 0px;
+    padding: var(--px-16);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,5 +289,9 @@ header ul li a:hover::after {
     }
     .home img{
         aspect-ratio: 1/1;
+    }
+
+    .home p{
+        font-size: 14px;
     }
 }
