@@ -102,7 +102,7 @@ header .title .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--px-36);
+    width: 36px;
     border-radius: 50%;
     background: var(--button-color);
     aspect-ratio: 1 / 1;
@@ -111,13 +111,13 @@ header .title .icon {
 header .title p {
     color: var(--background-color);
     font-weight: var(--large-wieght);
-    font-size: var(--px-24);
+    font-size: 24px;
 }
 
 header .title h2 {
     color: var(--title-color);
     font-weight: var(--large-wieght);
-    font-size: var(--px-22);
+    font-size: 22px;
 }
 
 header .small-links {
@@ -252,7 +252,7 @@ header ul li a:hover::after {
 }
 
 .home p{
-    font-size: var(--px-16);
+    font-size: 16px;
     font-weight: 300;
     color: var(--hint-color);
 }
@@ -269,7 +269,7 @@ header ul li a:hover::after {
 
 .home a *{
     color: var(--background-color);
-    font-size: var(--px-16);
+    font-size: 16px;
     font-weight: 300;
 }
 
