@@ -1,0 +1,181 @@
+/*variables*/
+:root {
+    --background-color: #FFFFFF;
+    --button-color: #458FF6;
+    --title-color: #233348;
+    --black-title-color: #000000;
+    --hint-color: #7D7987;
+    --shadow-color: #bdbac65f;
+    --large-wieght: 700;
+    --meduim-wieght: 550;
+    --vertical-padding: 32px;
+    --horizontal-padding: 112px;
+}
+
+:root {
+    --px-scale: 1;
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --px-scale: 0.9;
+        --vertical-padding: 28px;
+        --horizontal-padding: 100px;
+    }
+}
+
+@media (max-width: 920px) {
+    :root {
+        --px-scale: 0.8;
+        --vertical-padding: 24px;
+        --horizontal-padding: 50px;
+    }
+}
+
+@media (max-width: 667px) {
+    :root {
+        --px-scale: 0.7;
+        --vertical-padding: 16px;
+        --horizontal-padding: 32px;
+    }
+}
+
+:root {
+    --px-1: calc(1px * var(--px-scale));
+    --px-2: calc(2px * var(--px-scale));
+    --px-4: calc(4px * var(--px-scale));
+    --px-6: calc(6px * var(--px-scale));
+    --px-8: calc(8px * var(--px-scale));
+    --px-10: calc(10px * var(--px-scale));
+    --px-12: calc(12px * var(--px-scale));
+    --px-14: calc(14px * var(--px-scale));
+    --px-16: calc(16px * var(--px-scale));
+    --px-18: calc(18px * var(--px-scale));
+    --px-20: calc(20px * var(--px-scale));
+    --px-22: calc(22px * var(--px-scale));
+    --px-24: calc(24px * var(--px-scale));
+    --px-28: calc(28px * var(--px-scale));
+    --px-32: calc(32px * var(--px-scale));
+    --px-36: calc(36px * var(--px-scale));
+    --px-40: calc(40px * var(--px-scale));
+    --px-44: calc(44px * var(--px-scale));
+    --px-48: calc(48px * var(--px-scale));
+    --px-56: calc(56px * var(--px-scale));
+    --px-64: calc(64px * var(--px-scale));
+    --px-72: calc(72px * var(--px-scale));
+    --px-80: calc(80px * var(--px-scale));
+    --px-96: calc(96px * var(--px-scale));
+    --px-112: calc(112px * var(--px-scale));
+    --px-120: calc(120px * var(--px-scale));
+}
+
+/*rules*/
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+#home {
+    margin-top: 100px;
+}
+
+@media (max-width: 1200px) {
+    html {
+        scroll-padding-top: 92px;
+    }
+
+    #home {
+        margin-top: 92px;
+    }
+
+}
+
+@media (max-width: 920px) {
+    html {
+        scroll-padding-top: 84px;
+    }
+
+    #home {
+        margin-top: 84px;
+    }
+
+}
+
+@media (max-width: 667px) {
+    html {
+        scroll-padding-top: 68px;
+    }
+
+    #home {
+        margin-top: 68px;
+    }
+}
+
+
+/*shared*/
+.titdiv {
+    display: flex;
+    flex-direction: column;
+    gap: var(--px-48);
+    justify-content: center;
+    align-items: center;
+    padding: var(--px-16) 0px;
+}
+
+.title-center {
+    justify-content: center;
+    align-items: center;
+    padding: var(--px-16) var(--px-48);
+}
+
+.titdiv h1 {
+    font-size: var(--px-40);
+    font-weight: 700;
+    color: var(--black-title-color);
+    position: relative;
+}
+
+.titdiv h1::after {
+    content: "";
+    position: absolute;
+    bottom: calc(-1 * var(--px-24));
+    width: 30%;
+    height: 2px;
+    border-radius: 60px;
+    background-color: var(--black-title-color);
+}
+
+.title-center h1::after {
+    left: 35%;
+}
+
+.titdiv p {
+    font-size: 16;
+    font-weight: 300;
+    color: var(--hint-color);
+}
+
+.title-center p {
+    text-align: center;
+}
+
+@media (max-width: 667px) {
+    .titdiv p {
+        font-size: 14px;
+    }
+}
