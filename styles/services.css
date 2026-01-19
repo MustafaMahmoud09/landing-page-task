@@ -44,7 +44,7 @@
 
 .grid-container .service:hover,
 .grid-container .service:hover i {
-    transform: scale(1.05);
+    transform: scale(1.025);
 }
 
 
