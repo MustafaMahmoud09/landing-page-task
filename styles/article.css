@@ -1,0 +1,77 @@
+.article {
+    border-radius: var(--px-20) var(--px-20) 0px 0px;
+    box-shadow: 2px 2px 6px 2px var(--shadow-color);
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.article img {
+    width: 100%;
+    aspect-ratio: 1 / .67;
+    border-radius: var(--px-20) var(--px-20) 0px 0px;
+    object-fit: cover;
+}
+
+.article .content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0px 24px;
+}
+
+.content h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black-title-color);
+}
+
+.content p {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--hint-color);
+}
+
+@media (max-width: 420px) {
+    .content h1 {
+        font-size: 22px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+}
+
+.content a {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: start;
+    align-items: center;
+    color: var(--button-color);
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 450;
+    position: relative;
+}
+
+.content a i {
+    width: fit-content;
+}
+
+.content a::after {
+    content: "";
+    position: absolute;
+    bottom: calc(-1 * var(--px-4));
+    left: 0;
+    width: 0;
+    height: var(--px-2);
+    background-color: var(--button-color);
+    transition: width 0.3s ease-in-out;
+    border-radius: 100px;
+}
+
+.content a:hover::after {
+    width: 100%;
+}
