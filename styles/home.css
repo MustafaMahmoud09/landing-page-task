@@ -7,6 +7,12 @@
     gap: var(--px-32);
 }
 
+@media (min-width: 1200px) {
+    .home {
+        gap: var(--px-120);
+    }
+}
+
 .home div:first-child {
     display: flex;
     flex-direction: column;
@@ -33,21 +39,6 @@
     color: var(--hint-color);
 }
 
-.home a {
-    padding: var(--px-16) var(--px-32);
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: calc(var(--px-120) + var(--px-40));
-    background: var(--button-color);
-}
-
-.home a * {
-    color: var(--background-color);
-    font-size: 16px;
-    font-weight: 300;
-}
 
 @media (min-width: 768px) {
     .home div:first-child {

@@ -52,3 +52,22 @@
         font-size: 14px;
     }
 }
+
+.services .tran-button {
+    align-self: center;
+}
+
+.services .service {
+    transition: all 0.3s ease-in-out;
+    border-bottom: 4px solid transparent;
+}
+
+.services .service:hover,
+.services .service:hover i {
+    transform: scale(1.05);
+}
+
+
+.services .service:hover {
+    border-bottom: 4px solid var(--button-color);
+}
